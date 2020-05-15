@@ -527,7 +527,7 @@ def main():
                    doc.appendChild(dataRoot)
 
                    dataElt = doc.createElement("folder")
-                   text=doc.createTextNode(str(folderpath.split("\\")[-1]+"\\"+prop))
+                   text=doc.createTextNode(str(folderpath.split("\\")[-1]))
                    dataElt.appendChild(text)
                    dataRoot.appendChild(dataElt)
                    
@@ -545,7 +545,7 @@ def main():
                    dataRoot.appendChild(dataElt)
                    
                    dataElt = doc.createElement("path")
-                   xmlsavepath=folderpath.split("\\")[-1]+"\\"+prop+"\\xml\\"+str(fi)+'.xml'
+                   xmlsavepath=folderpath.split("\\")[-1]+"\\"+prop+"\\JPEGImages\\"+str(fi)+'.jpg'
                    xmlsavepath=xmlsavepath.replace("\\","/")
                    text=doc.createTextNode(xmlsavepath)
                    dataElt.appendChild(text)
